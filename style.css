@@ -1,0 +1,32 @@
+:root{
+  --bg:#0b1220; --card:#0f1724; --accent:#ff6fa3; --muted:#9fb0c8;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+html,body{height:100%; margin:0;}
+body{
+  background: linear-gradient(180deg,#051428 0%, #00101b 100%);
+  color: #eef6ff; display:flex; align-items:center; justify-content:center; padding:24px;
+}
+.wrap{width:100%; max-width:860px;}
+header{display:flex; justify-content:space-between; align-items:center; margin-bottom:18px;}
+.brand{display:flex; gap:12px; align-items:center;}
+.brand h1{margin:0; font-size:1.4rem;}
+.admin-link{background:transparent; border:1px solid rgba(255,255,255,0.06); padding:8px 10px; border-radius:8px; color:var(--muted); cursor:pointer;}
+.card{background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:22px; border-radius:12px; border:1px solid rgba(255,255,255,0.04);}
+.center{display:flex; align-items:center; justify-content:center; flex-direction:column; gap:12px; min-height:240px;}
+.btn{background:var(--accent); color:#061128; padding:10px 14px; border-radius:10px; border:0; font-weight:700; cursor:pointer;}
+.ghost{background:transparent; color:var(--muted); border:1px solid rgba(255,255,255,0.04); padding:8px 12px; border-radius:8px; cursor:pointer;}
+input[type="text"], input[type="password"], input[type="number"]{
+  width:100%; padding:10px 12px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:inherit;
+}
+form{max-width:420px; width:100%;}
+.wishes-grid{display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); margin-top:12px;}
+.wish{background:rgba(255,255,255,0.03); padding:12px; border-radius:10px; text-align:center; font-weight:600;}
+.small{color:var(--muted); font-size:0.9rem;}
+footer{margin-top:16px; color:var(--muted); font-size:0.85rem;}
+table{width:100%; border-collapse:collapse; margin-top:10px;}
+th,td{padding:8px 10px; border-bottom:1px dashed rgba(255,255,255,0.04); text-align:left; font-size:0.9rem;}
+.controls{display:flex; gap:8px; margin-top:8px;}
+.logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(180deg,#ff6fa3,#ff9ccf);display:flex;align-items:center;justify-content:center;font-weight:800;color:#071125}
+.row-head{display:flex; justify-content:space-between; align-items:center;}
+@media(max-width:640px){ .center{min-height:200px;} }

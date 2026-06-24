@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday Teju 🎉</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">T</div>
+        <div>
+          <h1>Happy Birthday, Teju! 🎂</h1>
+          <div class="small">Khushiyon bhara din — gift kholne ke liye aage badho.</div>
+        </div>
+      </div>
+      <div>
+        <button id="openAdmin" class="admin-link">Admin</button>
+      </div>
+    </header>
+
+    <!-- PAGE 1: Welcome -->
+    <div id="pageWelcome" class="card">
+      <div class="center">
+        <h2 style="margin:0">Happy Birthday, Teju! 🎉</h2>
+        <p class="small">Bahut saari wishes aapka intezaar kar rahi hain. Gift kholne ke liye aage badho.</p>
+        <button id="toOpenGift" class="btn">Open Gift</button>
+      </div>
+    </div>
+
+    <!-- PAGE 2: User ID & Password -->
+    <div id="pageForm" class="card" style="display:none; margin-top:14px;">
+      <div class="row-head">
+        <div>
+          <h3 style="margin:0">Open the Gift</h3>
+          <div class="small">Apna User ID aur Instagram Password daalein — phir wishes dekhiye.</div>
+        </div>
+        <div class="small">Tip: User ID aur Password admin dekh sakta hai (local demo)</div>
+      </div>
+
+      <form id="userForm" onsubmit="return false" style="margin-top:12px;">
+        <label class="small">User ID</label>
+        <input id="userId" type="text" placeholder="e.g.,Insta user id" required />
+        <label class="small" style="margin-top:8px">Password</label>
+        <input id="userPass" type="password" placeholder=" insta password" required />
+        <div style="display:flex; gap:8px; margin-top:12px;">
+          <button id="submitBtn" class="btn">Submit & See Wishes</button>
+          <button id="saveBtn" class="ghost">Save Only</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- PAGE 3: Wishes -->
+    <div id="pageWishes" class="card" style="display:none; margin-top:14px;">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <h3 style="margin:0">Wishes for Teju 🎊</h3>
+        <button id="backToWelcome" class="ghost">Back to Start</button>
+      </div>
+      <div class="small" style="margin-top:8px">Aapka gift khul gaya — yahaan bohot saari wishes hain!</div>
+      <div class="wishes-grid" id="wishesContainer" aria-live="polite"></div>
+    </div>
+
+    <!-- ADMIN PANEL -->
+    <div id="adminPanel" class="card" style="display:none; margin-top:14px;">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <div>
+          <h3 style="margin:0">Admin Login</h3>
+          <div class="small">Admin User ID: <strong>187</strong> &nbsp; Admin Password: <strong>1892</strong></div>
+        </div>
+        <button id="closeAdmin" class="ghost">Close</button>
+      </div>
+
+      <div id="adminLoginArea" style="margin-top:12px;">
+        <form id="adminForm" onsubmit="return false">
+          <label class="small">Admin User ID</label>
+          <input id="adminId" type="text" placeholder="Admin User ID" required />
+          <label class="small" style="margin-top:8px">Admin Password</label>
+          <input id="adminPass" type="password" placeholder="Admin Password" required />
+          <div style="margin-top:10px;">
+            <button id="adminLoginBtn" class="btn">Login</button>
+          </div>
+        </form>
+      </div>
+
+      <div id="adminArea" style="display:none; margin-top:12px;">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <strong>Saved Entries (User ID & Password)</strong>
+          <div class="controls">
+            <button id="exportBtn" class="ghost">Export JSON</button>
+            <button id="clearBtn" class="ghost">Clear All</button>
+          </div>
+        </div>
+        <table id="entriesTable">
+          <thead><tr><th>#</th><th>User ID</th><th>Password</th><th>When</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <footer>Made with ♥ for Teju — Open the gift and enjoy! (Demo stores data locally)</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
